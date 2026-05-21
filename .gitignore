@@ -1,0 +1,27 @@
+# API keys và secrets
+.env
+*.env.local
+
+# Far-Sec vault (KHÔNG bao giờ commit)
+vault/03-far-sec/
+
+# Jupyter outputs (lớn, thay đổi liên tục)
+notebooks/**/*.ipynb
+notebooks/**/output/
+!notebooks/templates/*.ipynb
+
+# Logs
+logs/*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Zotero storage (PDF files lớn)
+zotero-exports/*.pdf

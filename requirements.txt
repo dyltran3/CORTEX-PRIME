@@ -1,0 +1,35 @@
+# Core AI
+google-genai>=0.5.0               # Gemini API client
+openai>=1.0.0                      # Backup: OpenAI API (nếu cần)
+
+# Obsidian / Markdown processing
+python-frontmatter>=1.0.0          # Đọc/ghi YAML frontmatter
+markdown>=3.5.0                    # Parse Markdown
+
+# HTTP & API
+requests>=2.31.0                   # AnkiConnect, general HTTP
+httpx>=0.27.0                      # Async HTTP client
+
+# Data processing
+python-dotenv>=1.0.0               # .env file loading
+pydantic>=2.0.0                    # Data validation / JSON schema
+
+# File handling
+pathlib                            # Built-in, no install needed
+watchdog>=4.0.0                    # Watch vault for file changes (optional)
+
+# PDF (nếu cần pre-process trước khi gửi Gemini)
+pypdf>=4.0.0                       # Extract text từ PDF locally
+
+# Utilities
+rich>=13.0.0                       # Beautiful terminal output / logging
+schedule>=1.2.0                    # Cron-style scheduler trong Python
+click>=8.1.0                       # CLI interface cho scripts
+
+# Simulation Hub (Phase 5)
+jupyterlab>=4.0.0                  # Jupyter notebook environment
+sympy>=1.12                        # Symbolic math
+numpy>=1.26.0                      # Numerical computation
+scipy>=1.11.0                      # Scientific computing
+matplotlib>=3.8.0                  # Plotting
+plotly>=5.18.0                     # Interactive visualization
