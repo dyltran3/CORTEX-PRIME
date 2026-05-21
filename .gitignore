@@ -11,7 +11,9 @@ notebooks/**/output/
 !notebooks/templates/*.ipynb
 
 # Logs
+logs/
 logs/*.log
+scratch/
 
 # Python cache
 __pycache__/
@@ -22,6 +24,9 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Editor settings
+.idea/
 
 # Zotero storage (PDF files lớn)
 zotero-exports/*.pdf

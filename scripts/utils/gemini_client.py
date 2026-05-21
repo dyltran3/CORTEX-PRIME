@@ -100,7 +100,7 @@ class GeminiClientWrapper:
                 else:
                     raise e
 
-    def get_embedding(self, text: str, model: str = "text-embedding-004", max_retries: int = 5) -> list:
+    def get_embedding(self, text: str, model: str = "gemini-embedding-001", max_retries: int = 5) -> list:
         """
         Fetches the vector embedding for a given text string.
         Utilizes the text-embedding-004 model.

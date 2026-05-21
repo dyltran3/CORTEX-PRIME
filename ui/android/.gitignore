@@ -1,0 +1,16 @@
+# Gradle cache and builds
+.gradle/
+build/
+app/build/
+
+# Local SDK configuration (contains absolute paths)
+local.properties
+
+# Android Studio IDE files
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Log files
+*.log
