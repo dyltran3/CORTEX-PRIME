@@ -98,7 +98,26 @@ Chạy lệnh sau để tự động tạo cấu trúc các vault con, meta temp
 $env:PYTHONIOENCODING="utf-8"; python scripts/setup.py
 ```
 
+### 5. Khởi chạy & Đóng gói ứng dụng Desktop (Electron App)
+Chúng tôi đã tích hợp sẵn bộ bao bọc **Electron** và trình đóng gói **electron-builder** cho phép bạn khởi chạy hoặc đóng gói CORTEX-PRIME thành phần mềm Windows (.exe) cài đặt trực tiếp trên desktop:
+
+* **Chạy thử chế độ phát triển (Dev Mode)**:
+  Mở terminal tại thư mục `ui/` và chạy:
+  ```powershell
+  npm run dev
+  # Trong một cửa sổ terminal khác tại thư mục ui/:
+  npm run electron
+  ```
+* **Đóng gói thành tệp cài đặt (.exe) tải về Desktop**:
+  Mở terminal tại thư mục `ui/` và chạy:
+  ```powershell
+  npm run electron:build
+  ```
+  Sau khi hoàn tất, tệp cài đặt chính thức `CortexPrime Setup 1.0.0.exe` và bản chạy ngay portable sẽ được tạo ra tại thư mục `ui/dist-electron/` để bạn cài đặt/tải về desktop!
+* Xem hướng dẫn chi tiết tại: [DESKTOP_INSTALLATION.md](file:///c:/GitHub/CORTEX-PRIME/docs/DESKTOP_INSTALLATION.md).
+
 ---
+
 
 ## 🚀 Hướng Dẫn Vận Hành Các Module
 
