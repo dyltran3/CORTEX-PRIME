@@ -1,35 +1,74 @@
-# Core AI
-google-genai>=0.5.0               # Gemini API client
-openai>=1.0.0                      # Backup: OpenAI API (nếu cần)
+# CORTEX-PRIME Requirements
+# Python 3.11+
 
-# Obsidian / Markdown processing
-python-frontmatter>=1.0.0          # Đọc/ghi YAML frontmatter
-markdown>=3.5.0                    # Parse Markdown
+# Core AI & LLM
+google-generativeai>=0.7.0              # Gemini API client
+openai>=1.0.0                           # OpenAI backup API
 
-# HTTP & API
-requests>=2.31.0                   # AnkiConnect, general HTTP
-httpx>=0.27.0                      # Async HTTP client
+# Web Framework & API Server
+fastapi>=0.104.0                        # Modern async web framework
+uvicorn[standard]>=0.24.0               # ASGI server for FastAPI
+starlette>=0.27.0                       # ASGI toolkit (FastAPI dependency)
 
-# Data processing
-python-dotenv>=1.0.0               # .env file loading
-pydantic>=2.0.0                    # Data validation / JSON schema
+# Authentication & Security
+python-jose[cryptography]>=3.3.0        # JWT token generation/validation
+passlib[bcrypt]>=1.7.4                  # Password hashing
+bcrypt>=4.1.0                           # Bcrypt hashing algorithm
+pydantic[email]>=2.0.0                  # Data validation & settings
 
-# File handling
-pathlib                            # Built-in, no install needed
-watchdog>=4.0.0                    # Watch vault for file changes (optional)
+# Obsidian & Markdown Processing
+python-frontmatter>=1.0.0               # YAML frontmatter parsing
+markdown>=3.5.0                         # Markdown parsing
+python-dotenv>=1.0.0                    # .env file loading
 
-# PDF (nếu cần pre-process trước khi gửi Gemini)
-pypdf>=4.0.0                       # Extract text từ PDF locally
+# HTTP & Async
+requests>=2.31.0                        # HTTP client
+httpx>=0.27.0                           # Async HTTP client
+aiohttp>=3.9.0                          # Async HTTP (alternative)
 
-# Utilities
-rich>=13.0.0                       # Beautiful terminal output / logging
-schedule>=1.2.0                    # Cron-style scheduler trong Python
-click>=8.1.0                       # CLI interface cho scripts
+# File Handling & Storage
+pathlib                                 # Path operations (built-in)
+PyYAML>=6.0                             # YAML parsing
+json                                    # JSON (built-in)
 
-# Simulation Hub (Phase 5)
-jupyterlab>=4.0.0                  # Jupyter notebook environment
-sympy>=1.12                        # Symbolic math
-numpy>=1.26.0                      # Numerical computation
-scipy>=1.11.0                      # Scientific computing
-matplotlib>=3.8.0                  # Plotting
-plotly>=5.18.0                     # Interactive visualization
+# PDF Processing (Optional, for Paper Deconstructor)
+pypdf>=4.0.0                            # PDF text extraction
+pdfplumber>=0.10.0                      # PDF parsing alternative
+
+# Database & ORM (for backend API)
+sqlalchemy>=2.0.0                       # SQL toolkit & ORM
+alembic>=1.13.0                         # Database migration tool
+sqlite3                                 # SQLite driver (built-in)
+
+# Async Task Queue (Optional, for background jobs)
+celery>=5.3.0                           # Distributed task queue
+redis>=5.0.0                            # Redis client (Celery broker)
+flower>=2.0.0                           # Celery monitoring (optional)
+
+# Utilities & Logging
+rich>=13.0.0                            # Rich terminal output
+loguru>=0.7.0                           # Advanced logging
+click>=8.1.0                            # CLI interface
+schedule>=1.2.0                         # Cron-style scheduling
+python-multipart>=0.0.6                 # File upload support
+slugify>=0.0.1                          # URL-safe slugs
+
+# Data Processing
+numpy>=1.24.0                           # Numerical computing (optional)
+pandas>=2.0.0                           # Data frames (optional)
+
+# Testing (Development)
+pytest>=7.4.0                           # Testing framework
+pytest-asyncio>=0.21.0                  # Async test support
+pytest-cov>=4.1.0                       # Coverage reporting
+httpx[http2]>=0.27.0                    # HTTP testing client
+
+# Code Quality (Development)
+black>=23.0.0                           # Code formatter
+flake8>=6.0.0                           # Linting
+isort>=5.12.0                           # Import sorting
+mypy>=1.7.0                             # Type checking
+
+# Documentation (Optional)
+sphinx>=7.0.0                           # Documentation generator
+sphinx-rtd-theme>=2.0.0                 # ReadTheDocs theme
